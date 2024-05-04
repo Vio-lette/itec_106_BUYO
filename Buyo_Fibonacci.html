@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        function fibonaccisequence() {
+            
+            var num = parseInt(prompt("Enter the number of terms in the Fibonacci sequence: "));
+        
+            if (isNaN(num)) {
+                alert("Invalid Input, Please Input an Integer");
+                return fibonaccisequence(); 
+            } else if (num <= 0) {
+                alert("Invalid Input, Please enter a number more than 0");
+                return fibonaccisequence(); 
+            }
+            else if (num >= 100) {
+                alert("Invalid Input, Please enter a number less than 100");
+                return fibonaccisequence(); 
+            }
+    else{
+            var fs = [];
+            var num1 = 0, num2 = 1, nums;
+    
+            for (let i = 1; i <= num; i++) {
+                fs.push(num1); 
+                nums = num1 + num2;
+                num1 = num2;
+                num2 = nums;
+            }
+    
+            alert("Fibonacci sequence: " + fs.join(", "));
+        }
+    }
+    
+        fibonaccisequence();
+    </script>
+    
+</body>
+</html>
